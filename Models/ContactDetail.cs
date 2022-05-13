@@ -3,11 +3,17 @@
     public class ContactDetail
     {
         public int Id { get; set; }
-        public String? Name { get; set; }        
-        public String? Email { get; set; }         
-        public String? Mobile { get; set; }       
-        public String? LandLine { get; set; }    
-        public String? Website { get; set; }    
-        public String? Address { get; set; }     //primitive
+
+        public string? Name { get; set; }     
+        
+        public string? Email { get; set; }       
+        
+        public string? Mobile { get; set; }       
+
+        public string? LandLine { get; set; }    
+
+        public string? Website { get; set; }    
+
+        public string? Address { get; set; }     
     }
 }

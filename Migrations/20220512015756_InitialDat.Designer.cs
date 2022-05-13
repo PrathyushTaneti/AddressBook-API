@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AddressBookAPI.Migrations
 {
-    [DbContext(typeof(AddressBookAPIContext))]
+    [DbContext(typeof(AddressBookDbContext))]
     [Migration("20220512015756_InitialDat")]
     partial class InitialDat
     {

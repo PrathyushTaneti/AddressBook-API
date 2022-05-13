@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AddressBookAPI.Migrations
 {
-    [DbContext(typeof(AddressBookAPIContext))]
+    [DbContext(typeof(AddressBookDbContext))]
     partial class AddressBookAPIContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

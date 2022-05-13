@@ -5,7 +5,7 @@ using AddressBookAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<AddressBookAPIContext>(options =>
+builder.Services.AddDbContext<AddressBookDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("AddressBookAPIContext") ?? throw new InvalidOperationException("Connection string 'AddressBookAPIContext' not found.")));
 
 // Add services to the container.
