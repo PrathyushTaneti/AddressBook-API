@@ -17,48 +17,48 @@ namespace AddressBookAPI.Controllers
     [ApiController]
     public class ContactDetailsController : ControllerBase
     {
-        private readonly IContactDetailService ContactDetailsService;
+        private readonly IContactDetailService ContactDetailService;
 
         public ContactDetailsController(IContactDetailService service)
         {
-            this.ContactDetailsService = service; 
+            this.ContactDetailService = service; 
         }
 
         // GET: api/ContactDetails
         [HttpGet]
         public IEnumerable<ContactDetail> GetContactDetails() 
         {
-            return this.ContactDetailsService.GetAllContactDetails();
+            return this.ContactDetailService.GetAllContactDetails();
         }
 
         // GET: api/ContactDetails/5
         [HttpGet("{id}")]
-        public ContactDetail GetContactDetails(int id)                                                                      
+        public ContactDetail GetContactDetail(int id)                                                                      
         {
-            return this.ContactDetailsService.GetContactDetail(id);
+            return this.ContactDetailService.GetContactDetail(id);
         }
 
         // POST: api/ContactDetails
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public Task<int> PostContactDetails(ContactDetail contactDetails)
+        public Task<int> PostContactDetail(ContactDetail contactDetail)
         {
-            return this.ContactDetailsService.AddContactDetails(contactDetails);
+            return this.ContactDetailService.AddContactDetail(contactDetail);
         }
 
         // PUT: api/ContactDetails/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public bool PutContactDetails(int id, ContactDetail contactDetails)
+        public bool PutContactDetail(int id, ContactDetail contactDetail)
         {
-            return this.ContactDetailsService.UpdateContactDetails(id, contactDetails);
+            return this.ContactDetailService.UpdateContactDetail(id, contactDetail);
         }
 
         // DELETE: api/ContactDetails/5
         [HttpDelete("{id}")]
-        public bool DeleteContactDetails(int id)
+        public bool DeleteContactDetail(int id)
         {
-            return this.ContactDetailsService.DeleteContactById(id);
+            return this.ContactDetailService.DeleteContactById(id);
         }
     }
 }
