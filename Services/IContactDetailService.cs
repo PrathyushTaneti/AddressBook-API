@@ -9,9 +9,9 @@ namespace AddressBookAPI.Services
         
         public ContactDetail GetContactDetail(int id);
         
-        public bool UpdateContactDetails(int id, ContactDetail contact);
+        public bool UpdateContactDetail(int id, ContactDetail contact);
         
-        public Task<int> AddContactDetails(ContactDetail contact);
+        public Task<int> AddContactDetail(ContactDetail contact);
         
         public bool DeleteContactById(int id);
 

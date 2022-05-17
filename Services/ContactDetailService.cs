@@ -25,14 +25,14 @@ namespace AddressBookAPI.Services
             return this.DbContext.ContactDetails.SingleOrDefault(contact => contact.Id == Id);
         }
 
-        public async Task<int> AddContactDetails(ContactDetail contact)
+        public async Task<int> AddContactDetail(ContactDetail contact)
         {
             this.DbContext.ContactDetails.Add(contact);
             await this.DbContext.SaveChangesAsync();
             return contact.Id;
         }
 
-        public bool UpdateContactDetails(int id, ContactDetail contact)
+        public bool UpdateContactDetail(int id, ContactDetail contact)
         {
             if (id == contact.Id)
             {
